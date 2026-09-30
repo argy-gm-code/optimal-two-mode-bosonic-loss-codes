@@ -1,0 +1,142 @@
+#!/usr/bin/env python3
+"""eta090_f0: approximate structural family (0.95 connected links); per-run symmetry retained: C4: rho_1+rho_2; C6: rho_1+rho_3.
+
+Reflection -> fixed Euler prealignment -> common visual theta/phi rotation.
+Projector orientation is shared; the saved logical basis is not gauge-aligned.
+"""
+import argparse
+import os
+import sys
+import tempfile
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+DEFAULT_ANALYTIC_FILE = None
+BEST_RUN_ID = 'n24_eta090_s4'
+CANONICAL_NUMERICAL = 'n24_eta090_s4'
+OUTPUT_ROOT = HERE / "plots" / 'eta090_f0'
+VIEW = {'rotate': False, 'theta': 0.0, 'phi': 0.0}
+# Human-readable titles printed on the figures; K is code rank/dimension.
+NUMERICAL_TITLES = {'projector_sphere': 'Numerical code: projector\n$n=24$, $K=2$',
+ 'projector_plane': 'Numerical code: projector\n$n=24$, $K=2$',
+ 'logical0_sphere': 'Numerical code: logical state 0\n$n=24$, $K=2$',
+ 'logical0_plane': 'Numerical code: logical state 0\n$n=24$, $K=2$',
+ 'logical1_sphere': 'Numerical code: logical state 1\n$n=24$, $K=2$',
+ 'logical1_plane': 'Numerical code: logical state 1\n$n=24$, $K=2$'}
+ANALYTIC_TITLES = None
+# Analytic path and canonical orientation are deliberately separate.
+# Standard mode: Each selected entry is sent to plot_file_simple directly, exactly once.
+ENTRIES = [{'target': 'n24_eta090_s4',
+  'path': 'repro_sweep/n24/n24_eta0.90_d2_r21000_s4.pkl',
+  'fidelity': 0.9994223047748036,
+  'saved_eta': 0.9,
+  'reflect': True,
+  'alignment_euler': [-1.3973254771060089, 0.17168635026424234, -0.14691575243307786],
+  'output': 's4'},
+ {'target': 'n24_eta090_s2',
+  'path': 'repro_sweep/n24/n24_eta0.90_d2_r21000_s2.pkl',
+  'fidelity': 0.9994222476441069,
+  'saved_eta': 0.9,
+  'reflect': False,
+  'alignment_euler': [-1.7421093481458425, 1.4191624466189763, -2.7002314944033645],
+  'output': 's2'},
+ {'target': 'n24_eta090_s1',
+  'path': 'repro_sweep/n24/n24_eta0.90_d2_r21000_s1.pkl',
+  'fidelity': 0.9994221875884365,
+  'saved_eta': 0.9,
+  'reflect': False,
+  'alignment_euler': [2.1841280479269853, 0.7611912314278858, 0.9642880944579535],
+  'output': 's1'},
+ {'target': 'n24_eta090_s3',
+  'path': 'repro_sweep/n24/n24_eta0.90_d2_r21000_s3.pkl',
+  'fidelity': 0.9994197199270667,
+  'saved_eta': 0.9,
+  'reflect': False,
+  'alignment_euler': [1.7062934891257646, 0.4104072548070212, -4.0981667964732225],
+  'output': 's3'},
+ {'target': 'n24_eta090_s0',
+  'path': 'repro_sweep/n24/n24_eta0.90_d2_r21000_s0.pkl',
+  'fidelity': 0.9994192836553052,
+  'saved_eta': 0.9,
+  'reflect': False,
+  'alignment_euler': [2.9768580111304845, 1.8217855587687564, -2.008579186504486],
+  'output': 's0'}]
+FAMILY_MINIMUM_OVERLAP = 0.9004971034931295
+OVERLAPS_TO_BEST = {'n24_eta090_s4': 1.0, 'n24_eta090_s2': 0.9995566038231083, 'n24_eta090_s1': 0.9978048022258468, 'n24_eta090_s3': 0.9643304916650497, 'n24_eta090_s0': 0.904141931290531}
+ANALYTIC_COMPARISONS = [{'path': 'analytic_codes/n24_C4_code_12.pkl',
+  'classification': 'C4 reducible: rho_1 + rho_2',
+  'closest_run_id': 'n24_eta090_s4',
+  'overlap': 0.8248275275080259,
+  'qualifies': False,
+  'qualifying_run_ids': [],
+  'best_run_overlap': 0.8248275275080259,
+  'comparison_scripts': ['repro_analysis/n24/analytic_references/plot_n24_C4_code_12.py']},
+ {'path': 'analytic_codes/n24_2D3_code.pkl',
+  'classification': '2D3: rho_5 (pure irrep)',
+  'closest_run_id': 'n24_eta090_s1',
+  'overlap': 0.45682244884012635,
+  'qualifies': False,
+  'qualifying_run_ids': [],
+  'best_run_overlap': 0.45273283117576857,
+  'comparison_scripts': ['repro_analysis/n24/analytic_references/plot_n24_2D3_code.py']}]
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--list", action="store_true")
+    parser.add_argument("--target", default="best")
+    parser.add_argument("--analytic-file", type=Path)
+    parser.add_argument("--projector-only", action="store_true", help="Plot only the projector sphere and plane")
+    parser.add_argument("--interactive", action="store_true", help="Also save interactive sphere and plane HTML")
+    parser.add_argument("--no-show", action="store_true", help="Save interactive HTML without opening browser windows")
+    args = parser.parse_args()
+    if args.list:
+        print("Best numerical member:", BEST_RUN_ID)
+        print("Structural rule: connected links with overlap >= 0.95; endpoint overlaps may be lower")
+        print("Minimum pairwise overlap:", FAMILY_MINIMUM_OVERLAP)
+        print("Targets: analytic, best (default), numericals, all, or a run ID")
+        if DEFAULT_ANALYTIC_FILE is None:
+            print("No analytic counterpart meets the 0.95 criterion for this family.")
+        for comparison in ANALYTIC_COMPARISONS:
+            print("Analytic counterpart:" if comparison["qualifies"] else "Separate analytic comparison:",
+                  comparison["path"], "closest_member=", comparison["closest_run_id"], "overlap=", comparison["overlap"],
+                  "scripts=", comparison["comparison_scripts"])
+        for entry in ENTRIES:
+            path = (args.analytic_file if args.analytic_file else Path(DEFAULT_ANALYTIC_FILE)) if entry["target"] == "analytic" else Path(entry["path"])
+            print(entry["target"], "Fe=", entry["fidelity"], "saved_eta=", entry["saved_eta"], "path=", path,
+                  "overlap_to_best=", OVERLAPS_TO_BEST.get(entry["target"], "analytic comparison"))
+        return
+    target = BEST_RUN_ID if args.target == "best" else args.target
+    if target == "analytic" and DEFAULT_ANALYTIC_FILE is None:
+        parser.exit(message="No analytic counterpart meets the 0.95 criterion for this family; use --list for separate reference scripts.\n")
+    selected = [entry for entry in ENTRIES if target == "all" or
+                (target == "numericals" and entry["target"] != "analytic") or entry["target"] == target]
+    if not selected:
+        parser.error("unknown target; use --list")
+    sys.dont_write_bytecode = True
+    sys.path.insert(0, str(ROOT / "code"))
+    os.environ.setdefault("MPLBACKEND", "Agg")
+    os.environ.setdefault("MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "repro_analysis_matplotlib"))
+    import graph_n_photons_new
+    if args.interactive and args.no_show:
+        import plotly.io as pio
+        pio.renderers.default = ""
+    for entry in selected:
+        source = (args.analytic_file if args.analytic_file else Path(DEFAULT_ANALYTIC_FILE)) if entry["target"] == "analytic" else Path(entry["path"])
+        source = source if source.is_absolute() else ROOT / source
+        if not source.is_file():
+            parser.error(f"pickle does not exist: {source}")
+        kwargs = dict(
+            pkl_path=str(source), out_folder=str(OUTPUT_ROOT / entry["output"]),
+            interactive=args.interactive, reflect=entry["reflect"],
+            projector_only=args.projector_only,
+            alignment_euler=entry["alignment_euler"],
+            rotate=VIEW["rotate"], theta=VIEW["theta"], phi=VIEW["phi"],
+            titles=ANALYTIC_TITLES if entry["target"] == "analytic" else NUMERICAL_TITLES,
+        )
+        graph_n_photons_new.plot_file_simple(**kwargs)
+
+
+if __name__ == "__main__":
+    main()

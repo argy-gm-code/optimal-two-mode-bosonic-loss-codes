@@ -1,0 +1,770 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-30T06:00:57.768403+00:00",
+  "method": "graph_n_photons_new.test_code; fixed encoder, decoder-only optimization",
+  "graph_sha256": "aad12cf53c0cc61f87026b3ccaafa24134cfb7a9ae2f0c38855bcab9c8e0d6f0",
+  "optimizer_sha256": "6db262d50d57aa98b3307cdbf261f440feb821e198bee361ed0690c6c8842975",
+  "wrapper_sha256": "6ffd42846929ddd6a0aae113a8e3ce30ddbc071459a0f9b15d5e658d9ab73ce9",
+  "versions": {
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "cvxpy": "1.7.5",
+    "scs": "3.2.11"
+  },
+  "settings": {
+    "eps": 1e-09,
+    "target_gap": 1e-09,
+    "target_residual": 1e-08,
+    "target_physical": 1e-08,
+    "strict_solver_mode": true,
+    "max_iters": 100000,
+    "max_solver_retries": 5,
+    "decoder_workers": 1
+  },
+  "evaluations": [
+    {
+      "path": "repro_sweep/n14/n14_eta0.90_d2_r21000_s3.pkl",
+      "source_sha256": "e0fe9a09c1da30000a95b312fac6287bd090908d809165a67b9fc2bb29bfba2a",
+      "n": 14,
+      "logical_dimension": 2,
+      "seed": 3,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.9976689155420618,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9998495957366649,
+      "coherent_information": 0.999595767619752,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.202380932248376e-09,
+        "max_weighted_dual_residual": 1.659660211988899e-11,
+        "sum_weighted_fidelity_gaps": 6.879413902997543e-11,
+        "max_cp_error": 9.192011205045676e-10,
+        "max_tp_error": 4.082071548904615e-12,
+        "max_iterations": 3075,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 5.026045125000001,
+      "code_id": "n14_eta090_s3"
+    },
+    {
+      "path": "repro_sweep/n14/n14_eta0.95_d2_r21000_s1.pkl",
+      "source_sha256": "54cdf77fb9c3b3cc2aca502f24269f5508d9d14c8c11f2132d67a23b5fd4023a",
+      "n": 14,
+      "logical_dimension": 2,
+      "seed": 1,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.9998510830351249,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9998510832220275,
+      "coherent_information": 0.9996065536822093,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 9.705863103174797e-10,
+        "max_weighted_dual_residual": 1.0385704000761478e-10,
+        "sum_weighted_fidelity_gaps": 1.3206837955064355e-10,
+        "max_cp_error": 8.219470952033384e-10,
+        "max_tp_error": 1.964035409558346e-12,
+        "max_iterations": 450,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 0.6771165840000002,
+      "code_id": "n14_eta095_s1"
+    },
+    {
+      "path": "repro_sweep/n15/n15_eta0.90_d2_r21000_s4.pkl",
+      "source_sha256": "ec8adc9bc1b5454e88ab6a9a01d4a54d375c16a8bedff4b603ce54dfeced19da",
+      "n": 15,
+      "logical_dimension": 2,
+      "seed": 4,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.9978174886411162,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9998609862339652,
+      "coherent_information": 0.999626299790684,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.3310542598304348e-09,
+        "max_weighted_dual_residual": 6.772697617297155e-11,
+        "sum_weighted_fidelity_gaps": 7.48054922394557e-11,
+        "max_cp_error": 9.75043079050066e-10,
+        "max_tp_error": 4.239033737330321e-12,
+        "max_iterations": 275,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 0.7868187080000002,
+      "code_id": "n15_eta090_s4"
+    },
+    {
+      "path": "repro_sweep/n15/n15_eta0.95_d2_r21000_s1.pkl",
+      "source_sha256": "7b981012af14eaf27fad987b6c25e606fa3a6ca8de0260b244f83e78401fa48b",
+      "n": 15,
+      "logical_dimension": 2,
+      "seed": 1,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.9998690035709338,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9998690078408361,
+      "coherent_information": 0.9996879405898067,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.869022863480951e-09,
+        "max_weighted_dual_residual": 1.6379124035969215e-10,
+        "sum_weighted_fidelity_gaps": 1.7103347265375978e-10,
+        "max_cp_error": 1.5213908138283279e-09,
+        "max_tp_error": 1.0694558103904071e-11,
+        "max_iterations": 3675,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 4.904037833,
+      "code_id": "n15_eta095_s1"
+    },
+    {
+      "path": "repro_sweep/n16/n16_eta0.90_d2_r21000_s2.pkl",
+      "source_sha256": "415cd1978e410b2b88b69e87886b732d7613c25baec4e806d9b98b051be923a3",
+      "n": 16,
+      "logical_dimension": 2,
+      "seed": 2,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.9983147114054779,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999021518481922,
+      "coherent_information": 0.9997384693661066,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.1417691755337451e-09,
+        "max_weighted_dual_residual": 1.2779503060935426e-10,
+        "sum_weighted_fidelity_gaps": 3.67111256402246e-12,
+        "max_cp_error": 9.994098477587158e-10,
+        "max_tp_error": 2.2264469696857696e-12,
+        "max_iterations": 275,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 0.9105589999999992,
+      "code_id": "n16_eta090_s2"
+    },
+    {
+      "path": "repro_sweep/n16/n16_eta0.95_d2_r21000_s2.pkl",
+      "source_sha256": "d98435ca500f1f8dcbdff34c46ad5447221f9976cf89c2e8bac27935151d322e",
+      "n": 16,
+      "logical_dimension": 2,
+      "seed": 2,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.9999023830217482,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999023852795998,
+      "coherent_information": 0.9997394012296956,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.5714156968477516e-09,
+        "max_weighted_dual_residual": 1.66732182129188e-10,
+        "sum_weighted_fidelity_gaps": 5.80568464445699e-10,
+        "max_cp_error": 1.517601816228784e-09,
+        "max_tp_error": 2.452376915693854e-11,
+        "max_iterations": 13650,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 13.298024417000004,
+      "code_id": "n16_eta095_s2"
+    },
+    {
+      "path": "repro_sweep/n17/n17_eta0.90_d2_r21000_s0.pkl",
+      "source_sha256": "7f3d550da809fa753f4f1553a1d106a5fc8bf74dff5b3dfb62e679fcf0b48c19",
+      "n": 17,
+      "logical_dimension": 2,
+      "seed": 0,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.998527188576851,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999239763681723,
+      "coherent_information": 0.9998017483162079,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.935630886668993e-09,
+        "max_weighted_dual_residual": 1.1322569718171547e-10,
+        "sum_weighted_fidelity_gaps": 5.428473585960739e-11,
+        "max_cp_error": 1.770806895257267e-09,
+        "max_tp_error": 4.282675114297969e-12,
+        "max_iterations": 3575,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 3.4521085829999976,
+      "code_id": "n17_eta090_s0"
+    },
+    {
+      "path": "repro_sweep/n17/n17_eta0.95_d2_r21000_s4.pkl",
+      "source_sha256": "38107b44e77f931c14b203db7805e4b9b03f06861a5dfe3e5899deb726ca50e4",
+      "n": 17,
+      "logical_dimension": 2,
+      "seed": 4,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.9999238748374555,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999238748112502,
+      "coherent_information": 0.9998014601364669,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.4822521620683112e-09,
+        "max_weighted_dual_residual": 1.1423715451719982e-10,
+        "sum_weighted_fidelity_gaps": 3.752746501932164e-12,
+        "max_cp_error": 1.4076155447505772e-09,
+        "max_tp_error": 3.703306012318182e-12,
+        "max_iterations": 650,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 1.2384887919999983,
+      "code_id": "n17_eta095_s4"
+    },
+    {
+      "path": "repro_sweep/n18/n18_eta0.90_d2_r21000_s4.pkl",
+      "source_sha256": "72d021f0f28575bf685d7f958f13e0324a262bdbac27950849c08787fefacc7c",
+      "n": 18,
+      "logical_dimension": 2,
+      "seed": 4,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.9987385258537915,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999411184768248,
+      "coherent_information": 0.9998475748393155,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.903330932198135e-09,
+        "max_weighted_dual_residual": 4.324767694766176e-11,
+        "sum_weighted_fidelity_gaps": 1.3549000714768242e-10,
+        "max_cp_error": 2.177718882218768e-09,
+        "max_tp_error": 4.2901116046753835e-12,
+        "max_iterations": 650,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 3.5442929159999963,
+      "code_id": "n18_eta090_s4"
+    },
+    {
+      "path": "repro_sweep/n18/n18_eta0.95_d2_r21000_s0.pkl",
+      "source_sha256": "fe258fc94c3d88bbc7470b12acd7faa830e33c8ff8fc7d6e615ecfa730458048",
+      "n": 18,
+      "logical_dimension": 2,
+      "seed": 0,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.9999411124464075,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999411124885722,
+      "coherent_information": 0.999847556006966,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.8820106715566386e-09,
+        "max_weighted_dual_residual": 8.36333378102327e-11,
+        "sum_weighted_fidelity_gaps": 4.340322217682608e-13,
+        "max_cp_error": 1.24376679748547e-09,
+        "max_tp_error": 3.317057172297765e-12,
+        "max_iterations": 525,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 1.4428533750000057,
+      "code_id": "n18_eta095_s0"
+    },
+    {
+      "path": "repro_sweep/n19/n19_eta0.90_d2_r21000_s0.pkl",
+      "source_sha256": "d465a8d018ae62ea7c5c366a3de2aa36e6c1bf0b8e77aecf9da25aab7f9bab04",
+      "n": 19,
+      "logical_dimension": 2,
+      "seed": 0,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.9990778724408242,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999685133364766,
+      "coherent_information": 0.9999160812195325,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.8543803409705002e-09,
+        "max_weighted_dual_residual": 3.561081116013677e-11,
+        "sum_weighted_fidelity_gaps": 1.629330927668591e-10,
+        "max_cp_error": 1.1624690558348439e-09,
+        "max_tp_error": 4.845518932541588e-10,
+        "max_iterations": 26625,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 11.569132624999995,
+      "code_id": "n19_eta090_s0"
+    },
+    {
+      "path": "repro_sweep/n19/n19_eta0.95_d2_r21000_s3.pkl",
+      "source_sha256": "0b08e55b397efae459a9a4f880489f274f4ab19cfaaebabd62ce59d3b08a93bd",
+      "n": 19,
+      "logical_dimension": 2,
+      "seed": 3,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.9999639450060714,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999639573984415,
+      "coherent_information": 0.9999025002366739,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.989698435523676e-09,
+        "max_weighted_dual_residual": 2.1523014624440722e-10,
+        "sum_weighted_fidelity_gaps": 1.6669580716170902e-10,
+        "max_cp_error": 1.5918429561864967e-09,
+        "max_tp_error": 8.267048965856936e-12,
+        "max_iterations": 9575,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 17.105490707999998,
+      "code_id": "n19_eta095_s3"
+    },
+    {
+      "path": "repro_sweep/n20/n20_eta0.90_d2_r21000_s3.pkl",
+      "source_sha256": "db6a25bc84133cdf87353aa6d4735cb0f7ca41cc03613a182b36e048847132a6",
+      "n": 20,
+      "logical_dimension": 2,
+      "seed": 3,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.9990627401192397,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999652945586138,
+      "coherent_information": 0.9999025730412837,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.3028755512598265e-09,
+        "max_weighted_dual_residual": 2.3254433889085695e-11,
+        "sum_weighted_fidelity_gaps": 2.699220755618249e-11,
+        "max_cp_error": 9.928102699207575e-10,
+        "max_tp_error": 2.674555253044316e-12,
+        "max_iterations": 475,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 1.7472570829999938,
+      "code_id": "n20_eta090_s3"
+    },
+    {
+      "path": "repro_sweep/n20/n20_eta0.95_d2_r21000_s3.pkl",
+      "source_sha256": "230d9561a08c120027c3d388bd3405005a01e5f7cf5a9e7f91e1a99e67f9fe8d",
+      "n": 20,
+      "logical_dimension": 2,
+      "seed": 3,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.9999644640445688,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.99996446448682,
+      "coherent_information": 0.9999019881967729,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 9.936435163480225e-10,
+        "max_weighted_dual_residual": 6.031914804029006e-11,
+        "sum_weighted_fidelity_gaps": 1.7653996632283506e-10,
+        "max_cp_error": 6.686433204679841e-10,
+        "max_tp_error": 1.7660233523495295e-12,
+        "max_iterations": 575,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 1.7340921659999964,
+      "code_id": "n20_eta095_s3"
+    },
+    {
+      "path": "repro_sweep/n21/n21_eta0.90_d2_r21000_s1.pkl",
+      "source_sha256": "c21116331e0be349e81494a2128d61f568fb9820e58cfd1750ea807737f31832",
+      "n": 21,
+      "logical_dimension": 2,
+      "seed": 1,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.9992172167520482,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999735994420229,
+      "coherent_information": 0.9999286348949504,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.764380381159317e-09,
+        "max_weighted_dual_residual": 2.920906498155678e-10,
+        "sum_weighted_fidelity_gaps": 1.1326637386408594e-11,
+        "max_cp_error": 7.209092699776891e-10,
+        "max_tp_error": 3.4285466517610082e-12,
+        "max_iterations": 375,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 1.8894569579999967,
+      "code_id": "n21_eta090_s1"
+    },
+    {
+      "path": "repro_sweep/n21/n21_eta0.95_d2_r21000_s2.pkl",
+      "source_sha256": "d35bc7e01127f9eaeeb3a11a0ea7ec26e7122c548e3f5015bb9ff7abcb777534",
+      "n": 21,
+      "logical_dimension": 2,
+      "seed": 2,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.999966891401546,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999669036268344,
+      "coherent_information": 0.9999095802651209,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.788929753932134e-09,
+        "max_weighted_dual_residual": 4.460244041592852e-12,
+        "sum_weighted_fidelity_gaps": 6.852655828285274e-10,
+        "max_cp_error": 1.904093236850852e-09,
+        "max_tp_error": 2.156027429270169e-11,
+        "max_iterations": 1425,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 8.331998124999998,
+      "code_id": "n21_eta095_s2"
+    },
+    {
+      "path": "repro_sweep/n22/n22_eta0.90_d2_r21000_s1.pkl",
+      "source_sha256": "56db9a023bbbd5bd90e068e96e26045597fdbb1c7279c10a96f31f6ffa91f2a6",
+      "n": 22,
+      "logical_dimension": 2,
+      "seed": 1,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.9993550288413645,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999779536805878,
+      "coherent_information": 0.9999379334614906,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.766439977329733e-09,
+        "max_weighted_dual_residual": 6.833815041036198e-12,
+        "sum_weighted_fidelity_gaps": 1.854370809520323e-10,
+        "max_cp_error": 2.2950641028713612e-09,
+        "max_tp_error": 6.8132515406210174e-12,
+        "max_iterations": 2150,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 7.152929624999999,
+      "code_id": "n22_eta090_s1"
+    },
+    {
+      "path": "repro_sweep/n22/n22_eta0.95_d2_r21000_s0.pkl",
+      "source_sha256": "d7e1727f0bca36535a55829c0d931ee7ee98ee6fdb8f0ef87a50ed9525d94d94",
+      "n": 22,
+      "logical_dimension": 2,
+      "seed": 0,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.9999721287370479,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999721412886167,
+      "coherent_information": 0.999921854020077,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.996574976263127e-09,
+        "max_weighted_dual_residual": 1.2034267797735704e-11,
+        "sum_weighted_fidelity_gaps": 2.9666082809782954e-10,
+        "max_cp_error": 1.4808379333412837e-09,
+        "max_tp_error": 2.499154271709645e-11,
+        "max_iterations": 3600,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 14.165776000000008,
+      "code_id": "n22_eta095_s0"
+    },
+    {
+      "path": "repro_sweep/n23/n23_eta0.90_d2_r21000_s0.pkl",
+      "source_sha256": "31405b3ba429a101ad3b145cadbbf800e227c67c3be77bbfcef52a97c2ba1346",
+      "n": 23,
+      "logical_dimension": 2,
+      "seed": 0,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.9993585129638753,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999783007843538,
+      "coherent_information": 0.9999389114974222,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 2.0747930598435103e-09,
+        "max_weighted_dual_residual": 1.180754161645522e-10,
+        "sum_weighted_fidelity_gaps": 1.3108488327119606e-10,
+        "max_cp_error": 2.141518306831812e-09,
+        "max_tp_error": 1.0755693936622027e-11,
+        "max_iterations": 575,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 2.5099275000000034,
+      "code_id": "n23_eta090_s0"
+    },
+    {
+      "path": "repro_sweep/n23/n23_eta0.95_d2_r21000_s2.pkl",
+      "source_sha256": "e387a392483a55c6f0a57cc68232062bd2bc008748c98a1ba365f5c8519ed9d6",
+      "n": 23,
+      "logical_dimension": 2,
+      "seed": 2,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.9999755155101717,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999755223532171,
+      "coherent_information": 0.9999307973720515,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.705200760071038e-09,
+        "max_weighted_dual_residual": 1.004534262922767e-12,
+        "sum_weighted_fidelity_gaps": 2.6976001164848075e-10,
+        "max_cp_error": 6.175297442521239e-10,
+        "max_tp_error": 3.4061501018770864e-11,
+        "max_iterations": 1925,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 13.175260374999993,
+      "code_id": "n23_eta095_s2"
+    },
+    {
+      "path": "repro_sweep/n24/n24_eta0.90_d2_r21000_s4.pkl",
+      "source_sha256": "6d07b01e8c890de492c008e33f05374fb2d31b2a115ba3e6e627127a8a5d227b",
+      "n": 24,
+      "logical_dimension": 2,
+      "seed": 4,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.9994223047748036,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999809780503339,
+      "coherent_information": 0.9999461870248681,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.9787393141035936e-09,
+        "max_weighted_dual_residual": 9.626175349371116e-11,
+        "sum_weighted_fidelity_gaps": 4.586337522514608e-11,
+        "max_cp_error": 1.5778783604079507e-09,
+        "max_tp_error": 6.2730326132876095e-12,
+        "max_iterations": 575,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 3.2068484999999924,
+      "code_id": "n24_eta090_s4"
+    },
+    {
+      "path": "repro_sweep/n24/n24_eta0.95_d2_r21000_s1.pkl",
+      "source_sha256": "4559b38c0b5ec94ad40c96d3b979dfe0a497dcf6b0dd6b149d76b1148f0c20c3",
+      "n": 24,
+      "logical_dimension": 2,
+      "seed": 1,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.9999795889581942,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999795934829001,
+      "coherent_information": 0.9999423037900501,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.5801448598611116e-09,
+        "max_weighted_dual_residual": 6.5760664954118035e-12,
+        "sum_weighted_fidelity_gaps": 3.933513826584188e-10,
+        "max_cp_error": 1.5363613869410698e-09,
+        "max_tp_error": 2.3677748169117e-11,
+        "max_iterations": 3350,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 19.821834499999994,
+      "code_id": "n24_eta095_s1"
+    },
+    {
+      "path": "repro_sweep/n25/n25_eta0.90_d2_r21000_s3.pkl",
+      "source_sha256": "df19ef4dd356a59311d04434cb3fac5559eec9cdc8b8f9e4a20e594c6bf0eb20",
+      "n": 25,
+      "logical_dimension": 2,
+      "seed": 3,
+      "saved_eta": 0.9,
+      "saved_fidelity": 0.9995606065010767,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999863779001938,
+      "coherent_information": 0.9999610596691226,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.908165766639191e-09,
+        "max_weighted_dual_residual": 2.3115731135725822e-11,
+        "sum_weighted_fidelity_gaps": 2.87107160175081e-13,
+        "max_cp_error": 1.1661327860207693e-09,
+        "max_tp_error": 3.834274940874771e-12,
+        "max_iterations": 375,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 3.231733833000021,
+      "code_id": "n25_eta090_s3"
+    },
+    {
+      "path": "repro_sweep/n25/n25_eta0.95_d2_r21000_s3.pkl",
+      "source_sha256": "864813a4395c66b3823277b470c8b7e8468875c8ed6c3a6eb620293a58c8beb9",
+      "n": 25,
+      "logical_dimension": 2,
+      "seed": 3,
+      "saved_eta": 0.95,
+      "saved_fidelity": 0.9999791674864784,
+      "evaluation_eta": 0.95,
+      "eps": 1e-09,
+      "fidelity": 0.9999791663850348,
+      "coherent_information": 0.9999404221882632,
+      "encoder_unchanged": true,
+      "decoder_diagnostics": {
+        "accepted": true,
+        "max_primal_residual": 1.937768522876179e-09,
+        "max_weighted_dual_residual": 3.6508121388813833e-10,
+        "sum_weighted_fidelity_gaps": 1.7430664724647733e-10,
+        "max_cp_error": 1.5279053470265075e-09,
+        "max_tp_error": 4.8575677838944096e-12,
+        "max_iterations": 800,
+        "inaccurate_sectors": [],
+        "warnings": [
+          "divide by zero encountered in matmul",
+          "invalid value encountered in matmul",
+          "overflow encountered in matmul"
+        ]
+      },
+      "elapsed_seconds": 3.4400414589999855,
+      "code_id": "n25_eta095_s3"
+    }
+  ]
+}

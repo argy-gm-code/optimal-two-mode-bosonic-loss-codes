@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "parameters": {
+    "n": 5,
+    "K": 2,
+    "d": 3
+  },
+  "meaning": "Exact Farkas certificate proving infeasibility of the intrinsic MacWilliams LP.",
+  "normalization": "c^T x = -1",
+  "vector_order": [
+    {
+      "name": "slack_relation",
+      "start": 0,
+      "length": 6
+    },
+    {
+      "name": "sum_A",
+      "start": 6,
+      "length": 1
+    },
+    {
+      "name": "sum_B",
+      "start": 7,
+      "length": 1
+    },
+    {
+      "name": "macwilliams_relation",
+      "start": 8,
+      "length": 6
+    },
+    {
+      "name": "detection_relation",
+      "start": 14,
+      "length": 6
+    }
+  ],
+  "certificate": [
+    "393/140",
+    "99/140",
+    "99/140",
+    "0",
+    "0",
+    "0",
+    "-16/7",
+    "39/28",
+    "393/140",
+    "-393/140",
+    "-393/140",
+    "39/28",
+    "39/28",
+    "39/28",
+    "-21/10",
+    "-393/140",
+    "-393/140",
+    "-393/140",
+    "-393/140",
+    "-393/140"
+  ],
+  "exact_checks": {
+    "c_transpose_x": "-1",
+    "maximum_Ux": "0",
+    "all_Ux_nonpositive": true
+  }
+}

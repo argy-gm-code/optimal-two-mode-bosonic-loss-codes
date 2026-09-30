@@ -1,0 +1,1320 @@
+{
+  "schema_version": 11,
+  "rules": {
+    "family_overlap_threshold": 0.95,
+    "family_method": "Connected components of numerical overlaps at each (n, eta); endpoints can be below the threshold.",
+    "analytic_match": "At least one numerical family member has overlap >=0.95; analytic references never merge numerical families.",
+    "paths": "All active file and script paths are relative to the release root. Scientific modules and group data are bundled under code/."
+  },
+  "parameter_points": {
+    "n4_eta090": {
+      "f0": {
+        "members": [
+          "n4_eta090_s1",
+          "n4_eta090_s4",
+          "n4_eta090_s2",
+          "n4_eta090_s3",
+          "n4_eta090_s0"
+        ],
+        "best": "n4_eta090_s1",
+        "analytic_reference": "n4_2O_code",
+        "plot_script": "repro_analysis/n4/plot_eta090_f0.py"
+      }
+    },
+    "n4_eta095": {
+      "f0": {
+        "members": [
+          "n4_eta095_s3",
+          "n4_eta095_s4",
+          "n4_eta095_s2",
+          "n4_eta095_s0",
+          "n4_eta095_s1"
+        ],
+        "best": "n4_eta095_s3",
+        "analytic_reference": "n4_2O_code",
+        "plot_script": "repro_analysis/n4/plot_eta095_f0.py"
+      }
+    },
+    "n5_eta090": {
+      "f0": {
+        "members": [
+          "n5_eta090_s2",
+          "n5_eta090_s4",
+          "n5_eta090_s3",
+          "n5_eta090_s1",
+          "n5_eta090_s0"
+        ],
+        "best": "n5_eta090_s2",
+        "analytic_reference": "n5_C6_code_26",
+        "plot_script": "repro_analysis/n5/plot_eta090_f0.py"
+      }
+    },
+    "n5_eta095": {
+      "f0": {
+        "members": [
+          "n5_eta095_s3",
+          "n5_eta095_s1",
+          "n5_eta095_s4",
+          "n5_eta095_s2",
+          "n5_eta095_s0"
+        ],
+        "best": "n5_eta095_s3",
+        "analytic_reference": "n5_C6_code_26",
+        "plot_script": "repro_analysis/n5/plot_eta095_f0.py"
+      }
+    },
+    "n6_eta070": {
+      "f0": {
+        "members": [
+          "n6_eta070_s1",
+          "n6_eta070_s0"
+        ],
+        "best": "n6_eta070_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n6/plot_eta070_f0.py"
+      }
+    },
+    "n6_eta075": {
+      "f0": {
+        "members": [
+          "n6_eta075_s1",
+          "n6_eta075_s0"
+        ],
+        "best": "n6_eta075_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n6/plot_eta075_f0.py"
+      }
+    },
+    "n6_eta080": {
+      "f0": {
+        "members": [
+          "n6_eta080_s0",
+          "n6_eta080_s1"
+        ],
+        "best": "n6_eta080_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n6/plot_eta080_f0.py"
+      }
+    },
+    "n6_eta085": {
+      "f0": {
+        "members": [
+          "n6_eta085_s0",
+          "n6_eta085_s1"
+        ],
+        "best": "n6_eta085_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n6/plot_eta085_f0.py"
+      }
+    },
+    "n6_eta090": {
+      "f0": {
+        "members": [
+          "n6_eta090_s3",
+          "n6_eta090_s2",
+          "n6_eta090_s4",
+          "n6_eta090_s0",
+          "n6_eta090_s1"
+        ],
+        "best": "n6_eta090_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n6/plot_eta090_f0.py"
+      }
+    },
+    "n6_eta095": {
+      "f0": {
+        "members": [
+          "n6_eta095_s3",
+          "n6_eta095_s2",
+          "n6_eta095_s4",
+          "n6_eta095_s1",
+          "n6_eta095_s0"
+        ],
+        "best": "n6_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n6/plot_eta095_f0.py"
+      }
+    },
+    "n7_eta070": {
+      "f0": {
+        "members": [
+          "n7_eta070_s1",
+          "n7_eta070_s0"
+        ],
+        "best": "n7_eta070_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n7/plot_eta070_f0.py"
+      }
+    },
+    "n7_eta075": {
+      "f0": {
+        "members": [
+          "n7_eta075_s1",
+          "n7_eta075_s0"
+        ],
+        "best": "n7_eta075_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n7/plot_eta075_f0.py"
+      }
+    },
+    "n7_eta080": {
+      "f0": {
+        "members": [
+          "n7_eta080_s0",
+          "n7_eta080_s1"
+        ],
+        "best": "n7_eta080_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n7/plot_eta080_f0.py"
+      }
+    },
+    "n7_eta085": {
+      "f0": {
+        "members": [
+          "n7_eta085_s0",
+          "n7_eta085_s1"
+        ],
+        "best": "n7_eta085_s0",
+        "analytic_reference": "n7_2I_code",
+        "plot_script": "repro_analysis/n7/plot_eta085_f0.py"
+      }
+    },
+    "n7_eta090": {
+      "f0": {
+        "members": [
+          "n7_eta090_s4",
+          "n7_eta090_s3",
+          "n7_eta090_s1",
+          "n7_eta090_s2",
+          "n7_eta090_s0"
+        ],
+        "best": "n7_eta090_s4",
+        "analytic_reference": "n7_2I_code",
+        "plot_script": "repro_analysis/n7/plot_eta090_f0.py"
+      }
+    },
+    "n7_eta095": {
+      "f0": {
+        "members": [
+          "n7_eta095_s0",
+          "n7_eta095_s2",
+          "n7_eta095_s4",
+          "n7_eta095_s3",
+          "n7_eta095_s1"
+        ],
+        "best": "n7_eta095_s0",
+        "analytic_reference": "n7_2I_code",
+        "plot_script": "repro_analysis/n7/plot_eta095_f0.py"
+      }
+    },
+    "n8_eta070": {
+      "f0": {
+        "members": [
+          "n8_eta070_s0",
+          "n8_eta070_s1"
+        ],
+        "best": "n8_eta070_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n8/plot_eta070_f0.py"
+      }
+    },
+    "n8_eta075": {
+      "f0": {
+        "members": [
+          "n8_eta075_s1",
+          "n8_eta075_s0"
+        ],
+        "best": "n8_eta075_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n8/plot_eta075_f0.py"
+      }
+    },
+    "n8_eta080": {
+      "f0": {
+        "members": [
+          "n8_eta080_s1",
+          "n8_eta080_s0"
+        ],
+        "best": "n8_eta080_s1",
+        "analytic_reference": "n8_C6_code",
+        "plot_script": "repro_analysis/n8/plot_eta080_f0.py"
+      }
+    },
+    "n8_eta085": {
+      "f0": {
+        "members": [
+          "n8_eta085_s1",
+          "n8_eta085_s0"
+        ],
+        "best": "n8_eta085_s1",
+        "analytic_reference": "n8_C6_code",
+        "plot_script": "repro_analysis/n8/plot_eta085_f0.py"
+      }
+    },
+    "n8_eta090": {
+      "f0": {
+        "members": [
+          "n8_eta090_s0",
+          "n8_eta090_s1",
+          "n8_eta090_s3",
+          "n8_eta090_s2",
+          "n8_eta090_s4"
+        ],
+        "best": "n8_eta090_s0",
+        "analytic_reference": "n8_C6_code",
+        "plot_script": "repro_analysis/n8/plot_eta090_f0.py"
+      }
+    },
+    "n8_eta095": {
+      "f0": {
+        "members": [
+          "n8_eta095_s4",
+          "n8_eta095_s2",
+          "n8_eta095_s3",
+          "n8_eta095_s1",
+          "n8_eta095_s0"
+        ],
+        "best": "n8_eta095_s4",
+        "analytic_reference": "n8_C6_code",
+        "plot_script": "repro_analysis/n8/plot_eta095_f0.py"
+      }
+    },
+    "n9_eta070": {
+      "f0": {
+        "members": [
+          "n9_eta070_s0",
+          "n9_eta070_s1"
+        ],
+        "best": "n9_eta070_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n9/plot_eta070_f0.py"
+      }
+    },
+    "n9_eta075": {
+      "f0": {
+        "members": [
+          "n9_eta075_s0",
+          "n9_eta075_s1"
+        ],
+        "best": "n9_eta075_s0",
+        "analytic_reference": "n9_C6_code",
+        "plot_script": "repro_analysis/n9/plot_eta075_f0.py"
+      }
+    },
+    "n9_eta080": {
+      "f0": {
+        "members": [
+          "n9_eta080_s1",
+          "n9_eta080_s0"
+        ],
+        "best": "n9_eta080_s1",
+        "analytic_reference": "n9_C6_code",
+        "plot_script": "repro_analysis/n9/plot_eta080_f0.py"
+      }
+    },
+    "n9_eta085": {
+      "f0": {
+        "members": [
+          "n9_eta085_s1",
+          "n9_eta085_s0"
+        ],
+        "best": "n9_eta085_s1",
+        "analytic_reference": "n9_C6_code",
+        "plot_script": "repro_analysis/n9/plot_eta085_f0.py"
+      }
+    },
+    "n9_eta090": {
+      "f0": {
+        "members": [
+          "n9_eta090_s3",
+          "n9_eta090_s1",
+          "n9_eta090_s2",
+          "n9_eta090_s4",
+          "n9_eta090_s0"
+        ],
+        "best": "n9_eta090_s3",
+        "analytic_reference": "n9_C6_code",
+        "plot_script": "repro_analysis/n9/plot_eta090_f0.py"
+      }
+    },
+    "n9_eta095": {
+      "f0": {
+        "members": [
+          "n9_eta095_s1",
+          "n9_eta095_s3",
+          "n9_eta095_s0",
+          "n9_eta095_s4",
+          "n9_eta095_s2"
+        ],
+        "best": "n9_eta095_s1",
+        "analytic_reference": "n9_C6_code",
+        "plot_script": "repro_analysis/n9/plot_eta095_f0.py"
+      }
+    },
+    "n10_eta070": {
+      "f0": {
+        "members": [
+          "n10_eta070_s1",
+          "n10_eta070_s0"
+        ],
+        "best": "n10_eta070_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n10/plot_eta070_f0.py"
+      }
+    },
+    "n10_eta075": {
+      "f0": {
+        "members": [
+          "n10_eta075_s1",
+          "n10_eta075_s0"
+        ],
+        "best": "n10_eta075_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n10/plot_eta075_f0.py"
+      }
+    },
+    "n10_eta080": {
+      "f0": {
+        "members": [
+          "n10_eta080_s1",
+          "n10_eta080_s0"
+        ],
+        "best": "n10_eta080_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n10/plot_eta080_f0.py"
+      }
+    },
+    "n10_eta085": {
+      "f0": {
+        "members": [
+          "n10_eta085_s0",
+          "n10_eta085_s1"
+        ],
+        "best": "n10_eta085_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n10/plot_eta085_f0.py"
+      }
+    },
+    "n10_eta090": {
+      "f0": {
+        "members": [
+          "n10_eta090_s2",
+          "n10_eta090_s0",
+          "n10_eta090_s3",
+          "n10_eta090_s4",
+          "n10_eta090_s1"
+        ],
+        "best": "n10_eta090_s2",
+        "analytic_reference": "n10_2D4_code",
+        "plot_script": "repro_analysis/n10/plot_eta090_f0.py"
+      }
+    },
+    "n10_eta095": {
+      "f0": {
+        "members": [
+          "n10_eta095_s1",
+          "n10_eta095_s0",
+          "n10_eta095_s2",
+          "n10_eta095_s3",
+          "n10_eta095_s4"
+        ],
+        "best": "n10_eta095_s1",
+        "analytic_reference": "n10_2D4_code",
+        "plot_script": "repro_analysis/n10/plot_eta095_f0.py"
+      }
+    },
+    "n11_eta070": {
+      "f0": {
+        "members": [
+          "n11_eta070_s0",
+          "n11_eta070_s1"
+        ],
+        "best": "n11_eta070_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n11/plot_eta070_f0.py"
+      }
+    },
+    "n11_eta075": {
+      "f0": {
+        "members": [
+          "n11_eta075_s0"
+        ],
+        "best": "n11_eta075_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n11/plot_eta075_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n11_eta075_s1"
+        ],
+        "best": "n11_eta075_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n11/plot_eta075_f1.py"
+      }
+    },
+    "n11_eta080": {
+      "f0": {
+        "members": [
+          "n11_eta080_s0",
+          "n11_eta080_s1"
+        ],
+        "best": "n11_eta080_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n11/plot_eta080_f0.py"
+      }
+    },
+    "n11_eta085": {
+      "f0": {
+        "members": [
+          "n11_eta085_s0",
+          "n11_eta085_s1"
+        ],
+        "best": "n11_eta085_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n11/plot_eta085_f0.py"
+      }
+    },
+    "n11_eta090": {
+      "f0": {
+        "members": [
+          "n11_eta090_s2",
+          "n11_eta090_s3",
+          "n11_eta090_s1"
+        ],
+        "best": "n11_eta090_s2",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n11/plot_eta090_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n11_eta090_s0",
+          "n11_eta090_s4"
+        ],
+        "best": "n11_eta090_s0",
+        "analytic_reference": "n11_C8_code",
+        "plot_script": "repro_analysis/n11/plot_eta090_f1.py"
+      }
+    },
+    "n11_eta095": {
+      "f0": {
+        "members": [
+          "n11_eta095_s3",
+          "n11_eta095_s2",
+          "n11_eta095_s1"
+        ],
+        "best": "n11_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n11/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n11_eta095_s4",
+          "n11_eta095_s0"
+        ],
+        "best": "n11_eta095_s4",
+        "analytic_reference": "n11_C8_code",
+        "plot_script": "repro_analysis/n11/plot_eta095_f1.py"
+      }
+    },
+    "n12_eta070": {
+      "f0": {
+        "members": [
+          "n12_eta070_s1",
+          "n12_eta070_s0"
+        ],
+        "best": "n12_eta070_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n12/plot_eta070_f0.py"
+      }
+    },
+    "n12_eta075": {
+      "f0": {
+        "members": [
+          "n12_eta075_s1",
+          "n12_eta075_s0"
+        ],
+        "best": "n12_eta075_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n12/plot_eta075_f0.py"
+      }
+    },
+    "n12_eta080": {
+      "f0": {
+        "members": [
+          "n12_eta080_s1",
+          "n12_eta080_s0"
+        ],
+        "best": "n12_eta080_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n12/plot_eta080_f0.py"
+      }
+    },
+    "n12_eta085": {
+      "f0": {
+        "members": [
+          "n12_eta085_s0",
+          "n12_eta085_s1"
+        ],
+        "best": "n12_eta085_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n12/plot_eta085_f0.py"
+      }
+    },
+    "n12_eta090": {
+      "f0": {
+        "members": [
+          "n12_eta090_s4",
+          "n12_eta090_s3",
+          "n12_eta090_s1",
+          "n12_eta090_s0",
+          "n12_eta090_s2"
+        ],
+        "best": "n12_eta090_s4",
+        "analytic_reference": "n12_2T_code",
+        "plot_script": "repro_analysis/n12/plot_eta090_f0.py"
+      }
+    },
+    "n12_eta095": {
+      "f0": {
+        "members": [
+          "n12_eta095_s0",
+          "n12_eta095_s2",
+          "n12_eta095_s4",
+          "n12_eta095_s1",
+          "n12_eta095_s3"
+        ],
+        "best": "n12_eta095_s0",
+        "analytic_reference": "n12_2T_code",
+        "plot_script": "repro_analysis/n12/plot_eta095_f0.py"
+      }
+    },
+    "n13_eta070": {
+      "f0": {
+        "members": [
+          "n13_eta070_s1",
+          "n13_eta070_s0"
+        ],
+        "best": "n13_eta070_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n13/plot_eta070_f0.py"
+      }
+    },
+    "n13_eta075": {
+      "f0": {
+        "members": [
+          "n13_eta075_s1",
+          "n13_eta075_s0"
+        ],
+        "best": "n13_eta075_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n13/plot_eta075_f0.py"
+      }
+    },
+    "n13_eta080": {
+      "f0": {
+        "members": [
+          "n13_eta080_s0",
+          "n13_eta080_s1"
+        ],
+        "best": "n13_eta080_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n13/plot_eta080_f0.py"
+      }
+    },
+    "n13_eta085": {
+      "f0": {
+        "members": [
+          "n13_eta085_s0",
+          "n13_eta085_s1"
+        ],
+        "best": "n13_eta085_s0",
+        "analytic_reference": "n13_2O_code",
+        "plot_script": "repro_analysis/n13/plot_eta085_f0.py"
+      }
+    },
+    "n13_eta090": {
+      "f0": {
+        "members": [
+          "n13_eta090_s4",
+          "n13_eta090_s3",
+          "n13_eta090_s2",
+          "n13_eta090_s0",
+          "n13_eta090_s1"
+        ],
+        "best": "n13_eta090_s4",
+        "analytic_reference": "n13_2O_code",
+        "plot_script": "repro_analysis/n13/plot_eta090_f0.py"
+      }
+    },
+    "n13_eta095": {
+      "f0": {
+        "members": [
+          "n13_eta095_s3",
+          "n13_eta095_s2",
+          "n13_eta095_s4",
+          "n13_eta095_s0",
+          "n13_eta095_s1"
+        ],
+        "best": "n13_eta095_s3",
+        "analytic_reference": "n13_2O_code",
+        "plot_script": "repro_analysis/n13/plot_eta095_f0.py"
+      }
+    },
+    "n14_eta090": {
+      "f0": {
+        "members": [
+          "n14_eta090_s3",
+          "n14_eta090_s4",
+          "n14_eta090_s1",
+          "n14_eta090_s0",
+          "n14_eta090_s2"
+        ],
+        "best": "n14_eta090_s3",
+        "analytic_reference": "n14_C6_code",
+        "plot_script": "repro_analysis/n14/plot_eta090_f0.py"
+      }
+    },
+    "n14_eta095": {
+      "f0": {
+        "members": [
+          "n14_eta095_s1",
+          "n14_eta095_s0",
+          "n14_eta095_s4",
+          "n14_eta095_s2"
+        ],
+        "best": "n14_eta095_s1",
+        "analytic_reference": "n14_C6_code",
+        "plot_script": "repro_analysis/n14/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n14_eta095_s3"
+        ],
+        "best": "n14_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n14/plot_eta095_f1.py"
+      }
+    },
+    "n15_eta090": {
+      "f0": {
+        "members": [
+          "n15_eta090_s4",
+          "n15_eta090_s2",
+          "n15_eta090_s0",
+          "n15_eta090_s1",
+          "n15_eta090_s3"
+        ],
+        "best": "n15_eta090_s4",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n15/plot_eta090_f0.py"
+      }
+    },
+    "n15_eta095": {
+      "f0": {
+        "members": [
+          "n15_eta095_s1",
+          "n15_eta095_s4",
+          "n15_eta095_s3",
+          "n15_eta095_s7",
+          "n15_eta095_s5",
+          "n15_eta095_s9",
+          "n15_eta095_s2",
+          "n15_eta095_s0"
+        ],
+        "best": "n15_eta095_s1",
+        "analytic_reference": "n15_2T_code",
+        "plot_script": "repro_analysis/n15/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n15_eta095_s8"
+        ],
+        "best": "n15_eta095_s8",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n15/plot_eta095_f1.py"
+      },
+      "f2": {
+        "members": [
+          "n15_eta095_s6"
+        ],
+        "best": "n15_eta095_s6",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n15/plot_eta095_f2.py"
+      }
+    },
+    "n16_eta090": {
+      "f0": {
+        "members": [
+          "n16_eta090_s2",
+          "n16_eta090_s3",
+          "n16_eta090_s4",
+          "n16_eta090_s1",
+          "n16_eta090_s0"
+        ],
+        "best": "n16_eta090_s2",
+        "analytic_reference": "n16_2D3_code",
+        "plot_script": "repro_analysis/n16/plot_eta090_f0.py"
+      }
+    },
+    "n16_eta095": {
+      "f0": {
+        "members": [
+          "n16_eta095_s2",
+          "n16_eta095_s0"
+        ],
+        "best": "n16_eta095_s2",
+        "analytic_reference": "n16_2D3_code",
+        "plot_script": "repro_analysis/n16/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n16_eta095_s3"
+        ],
+        "best": "n16_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n16/plot_eta095_f1.py"
+      },
+      "f2": {
+        "members": [
+          "n16_eta095_s1"
+        ],
+        "best": "n16_eta095_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n16/plot_eta095_f2.py"
+      },
+      "f3": {
+        "members": [
+          "n16_eta095_s4"
+        ],
+        "best": "n16_eta095_s4",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n16/plot_eta095_f3.py"
+      }
+    },
+    "n17_eta090": {
+      "f0": {
+        "members": [
+          "n17_eta090_s0",
+          "n17_eta090_s3",
+          "n17_eta090_s1",
+          "n17_eta090_s4",
+          "n17_eta090_s2"
+        ],
+        "best": "n17_eta090_s0",
+        "analytic_reference": "n17_2D3_code",
+        "plot_script": "repro_analysis/n17/plot_eta090_f0.py"
+      }
+    },
+    "n17_eta095": {
+      "f0": {
+        "members": [
+          "n17_eta095_s4",
+          "n17_eta095_s2",
+          "n17_eta095_s0",
+          "n17_eta095_s3"
+        ],
+        "best": "n17_eta095_s4",
+        "analytic_reference": "n17_2D3_code",
+        "plot_script": "repro_analysis/n17/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n17_eta095_s1"
+        ],
+        "best": "n17_eta095_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n17/plot_eta095_f1.py"
+      }
+    },
+    "n18_eta090": {
+      "f0": {
+        "members": [
+          "n18_eta090_s4",
+          "n18_eta090_s0",
+          "n18_eta090_s2",
+          "n18_eta090_s3",
+          "n18_eta090_s1"
+        ],
+        "best": "n18_eta090_s4",
+        "analytic_reference": "n18_2D2_code",
+        "plot_script": "repro_analysis/n18/plot_eta090_f0.py"
+      }
+    },
+    "n18_eta095": {
+      "f0": {
+        "members": [
+          "n18_eta095_s0"
+        ],
+        "best": "n18_eta095_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n18/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n18_eta095_s2",
+          "n18_eta095_s4"
+        ],
+        "best": "n18_eta095_s2",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n18/plot_eta095_f1.py"
+      },
+      "f2": {
+        "members": [
+          "n18_eta095_s1"
+        ],
+        "best": "n18_eta095_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n18/plot_eta095_f2.py"
+      },
+      "f3": {
+        "members": [
+          "n18_eta095_s3"
+        ],
+        "best": "n18_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n18/plot_eta095_f3.py"
+      }
+    },
+    "n19_eta090": {
+      "f0": {
+        "members": [
+          "n19_eta090_s0",
+          "n19_eta090_s3",
+          "n19_eta090_s4",
+          "n19_eta090_s2"
+        ],
+        "best": "n19_eta090_s0",
+        "analytic_reference": "n19_2T_code",
+        "plot_script": "repro_analysis/n19/plot_eta090_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n19_eta090_s1"
+        ],
+        "best": "n19_eta090_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n19/plot_eta090_f1.py"
+      }
+    },
+    "n19_eta095": {
+      "f0": {
+        "members": [
+          "n19_eta095_s3"
+        ],
+        "best": "n19_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n19/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n19_eta095_s0"
+        ],
+        "best": "n19_eta095_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n19/plot_eta095_f1.py"
+      },
+      "f2": {
+        "members": [
+          "n19_eta095_s1"
+        ],
+        "best": "n19_eta095_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n19/plot_eta095_f2.py"
+      },
+      "f3": {
+        "members": [
+          "n19_eta095_s4"
+        ],
+        "best": "n19_eta095_s4",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n19/plot_eta095_f3.py"
+      },
+      "f4": {
+        "members": [
+          "n19_eta095_s2"
+        ],
+        "best": "n19_eta095_s2",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n19/plot_eta095_f4.py"
+      }
+    },
+    "n20_eta090": {
+      "f0": {
+        "members": [
+          "n20_eta090_s3",
+          "n20_eta090_s0",
+          "n20_eta090_s4",
+          "n20_eta090_s1"
+        ],
+        "best": "n20_eta090_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n20/plot_eta090_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n20_eta090_s2"
+        ],
+        "best": "n20_eta090_s2",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n20/plot_eta090_f1.py"
+      }
+    },
+    "n20_eta095": {
+      "f0": {
+        "members": [
+          "n20_eta095_s3"
+        ],
+        "best": "n20_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n20/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n20_eta095_s4"
+        ],
+        "best": "n20_eta095_s4",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n20/plot_eta095_f1.py"
+      },
+      "f2": {
+        "members": [
+          "n20_eta095_s1"
+        ],
+        "best": "n20_eta095_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n20/plot_eta095_f2.py"
+      },
+      "f3": {
+        "members": [
+          "n20_eta095_s2"
+        ],
+        "best": "n20_eta095_s2",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n20/plot_eta095_f3.py"
+      },
+      "f4": {
+        "members": [
+          "n20_eta095_s0"
+        ],
+        "best": "n20_eta095_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n20/plot_eta095_f4.py"
+      }
+    },
+    "n21_eta090": {
+      "f0": {
+        "members": [
+          "n21_eta090_s1",
+          "n21_eta090_s4",
+          "n21_eta090_s2",
+          "n21_eta090_s0"
+        ],
+        "best": "n21_eta090_s1",
+        "analytic_reference": "n21_2T_code",
+        "plot_script": "repro_analysis/n21/plot_eta090_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n21_eta090_s3"
+        ],
+        "best": "n21_eta090_s3",
+        "analytic_reference": "n21_2D4_code",
+        "plot_script": "repro_analysis/n21/plot_eta090_f1.py"
+      }
+    },
+    "n21_eta095": {
+      "f0": {
+        "members": [
+          "n21_eta095_s2"
+        ],
+        "best": "n21_eta095_s2",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n21/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n21_eta095_s1"
+        ],
+        "best": "n21_eta095_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n21/plot_eta095_f1.py"
+      },
+      "f2": {
+        "members": [
+          "n21_eta095_s3"
+        ],
+        "best": "n21_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n21/plot_eta095_f2.py"
+      },
+      "f3": {
+        "members": [
+          "n21_eta095_s4"
+        ],
+        "best": "n21_eta095_s4",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n21/plot_eta095_f3.py"
+      },
+      "f4": {
+        "members": [
+          "n21_eta095_s0"
+        ],
+        "best": "n21_eta095_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n21/plot_eta095_f4.py"
+      }
+    },
+    "n22_eta090": {
+      "f0": {
+        "members": [
+          "n22_eta090_s1",
+          "n22_eta090_s4",
+          "n22_eta090_s2"
+        ],
+        "best": "n22_eta090_s1",
+        "analytic_reference": "n22_2D5_code",
+        "plot_script": "repro_analysis/n22/plot_eta090_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n22_eta090_s0",
+          "n22_eta090_s3"
+        ],
+        "best": "n22_eta090_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n22/plot_eta090_f1.py"
+      }
+    },
+    "n22_eta095": {
+      "f0": {
+        "members": [
+          "n22_eta095_s0"
+        ],
+        "best": "n22_eta095_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n22/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n22_eta095_s1"
+        ],
+        "best": "n22_eta095_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n22/plot_eta095_f1.py"
+      },
+      "f2": {
+        "members": [
+          "n22_eta095_s2"
+        ],
+        "best": "n22_eta095_s2",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n22/plot_eta095_f2.py"
+      },
+      "f3": {
+        "members": [
+          "n22_eta095_s3"
+        ],
+        "best": "n22_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n22/plot_eta095_f3.py"
+      },
+      "f4": {
+        "members": [
+          "n22_eta095_s4"
+        ],
+        "best": "n22_eta095_s4",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n22/plot_eta095_f4.py"
+      }
+    },
+    "n23_eta090": {
+      "f0": {
+        "members": [
+          "n23_eta090_s0",
+          "n23_eta090_s4"
+        ],
+        "best": "n23_eta090_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n23/plot_eta090_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n23_eta090_s2"
+        ],
+        "best": "n23_eta090_s2",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n23/plot_eta090_f1.py"
+      },
+      "f2": {
+        "members": [
+          "n23_eta090_s1"
+        ],
+        "best": "n23_eta090_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n23/plot_eta090_f2.py"
+      },
+      "f3": {
+        "members": [
+          "n23_eta090_s3"
+        ],
+        "best": "n23_eta090_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n23/plot_eta090_f3.py"
+      }
+    },
+    "n23_eta095": {
+      "f0": {
+        "members": [
+          "n23_eta095_s2"
+        ],
+        "best": "n23_eta095_s2",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n23/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n23_eta095_s1"
+        ],
+        "best": "n23_eta095_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n23/plot_eta095_f1.py"
+      },
+      "f2": {
+        "members": [
+          "n23_eta095_s4"
+        ],
+        "best": "n23_eta095_s4",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n23/plot_eta095_f2.py"
+      },
+      "f3": {
+        "members": [
+          "n23_eta095_s0"
+        ],
+        "best": "n23_eta095_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n23/plot_eta095_f3.py"
+      },
+      "f4": {
+        "members": [
+          "n23_eta095_s3"
+        ],
+        "best": "n23_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n23/plot_eta095_f4.py"
+      }
+    },
+    "n24_eta090": {
+      "f0": {
+        "members": [
+          "n24_eta090_s4",
+          "n24_eta090_s2",
+          "n24_eta090_s1",
+          "n24_eta090_s3",
+          "n24_eta090_s0"
+        ],
+        "best": "n24_eta090_s4",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n24/plot_eta090_f0.py"
+      }
+    },
+    "n24_eta095": {
+      "f0": {
+        "members": [
+          "n24_eta095_s1"
+        ],
+        "best": "n24_eta095_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n24/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n24_eta095_s4"
+        ],
+        "best": "n24_eta095_s4",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n24/plot_eta095_f1.py"
+      },
+      "f2": {
+        "members": [
+          "n24_eta095_s0"
+        ],
+        "best": "n24_eta095_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n24/plot_eta095_f2.py"
+      },
+      "f3": {
+        "members": [
+          "n24_eta095_s3"
+        ],
+        "best": "n24_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n24/plot_eta095_f3.py"
+      },
+      "f4": {
+        "members": [
+          "n24_eta095_s2"
+        ],
+        "best": "n24_eta095_s2",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n24/plot_eta095_f4.py"
+      }
+    },
+    "n25_eta090": {
+      "f0": {
+        "members": [
+          "n25_eta090_s3",
+          "n25_eta090_s2",
+          "n25_eta090_s0",
+          "n25_eta090_s4",
+          "n25_eta090_s1"
+        ],
+        "best": "n25_eta090_s3",
+        "analytic_reference": "n25_2O_code",
+        "plot_script": "repro_analysis/n25/plot_eta090_f0.py"
+      }
+    },
+    "n25_eta095": {
+      "f0": {
+        "members": [
+          "n25_eta095_s3"
+        ],
+        "best": "n25_eta095_s3",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n25/plot_eta095_f0.py"
+      },
+      "f1": {
+        "members": [
+          "n25_eta095_s4"
+        ],
+        "best": "n25_eta095_s4",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n25/plot_eta095_f1.py"
+      },
+      "f2": {
+        "members": [
+          "n25_eta095_s2"
+        ],
+        "best": "n25_eta095_s2",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n25/plot_eta095_f2.py"
+      },
+      "f3": {
+        "members": [
+          "n25_eta095_s0"
+        ],
+        "best": "n25_eta095_s0",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n25/plot_eta095_f3.py"
+      },
+      "f4": {
+        "members": [
+          "n25_eta095_s1"
+        ],
+        "best": "n25_eta095_s1",
+        "analytic_reference": null,
+        "plot_script": "repro_analysis/n25/plot_eta095_f4.py"
+      }
+    }
+  }
+}

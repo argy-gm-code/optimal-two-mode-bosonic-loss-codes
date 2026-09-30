@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "distance_tolerance": 1e-08,
+  "codes": [
+    {
+      "path": "analytic_codes/n4_2O_code.pkl",
+      "distance": 2,
+      "group": "2O",
+      "sha256": "e4926d1497c12199e7b5199628c1a8ffe2400e5ba77a7b80e7a587b3c3f59ef5"
+    },
+    {
+      "path": "analytic_codes/n7_2I_code.pkl",
+      "distance": 3,
+      "group": "2I",
+      "sha256": "267541ff3167245ef0cd647fba97a57b298f547bb5663dddbba63126445ba5e7"
+    },
+    {
+      "path": "analytic_codes/n13_2O_code.pkl",
+      "distance": 4,
+      "group": "2O",
+      "sha256": "6b026aad429b3fd067d2690f45b8e7f7a4c05a3af46f1df9e4a909c54703a201"
+    },
+    {
+      "path": "analytic_codes/n19_2T_code.pkl",
+      "distance": 5,
+      "group": "2T",
+      "sha256": "8df3a82b74758975def3220f6252187166624917aa1ed8ab23850e1f9e62b57f"
+    },
+    {
+      "path": "additional_codes/n28_2O_code.pkl",
+      "distance": 6,
+      "group": "2O",
+      "sha256": "be9dfb12eaf059f4540f6a41e7f5278d34f85bc23c495f6bb6b32f1092222e82"
+    },
+    {
+      "path": "analytic_codes/n37_2I_code.pkl",
+      "distance": 7,
+      "group": "2I",
+      "sha256": "283f6aeb659f7e153c3b91af2cd31de4db1f3852f68071e05bd2e926f31b63ad"
+    },
+    {
+      "path": "additional_codes/n37_2T_code.pkl",
+      "distance": 7,
+      "group": "2T",
+      "sha256": "27455fe28297e8491eadbaec7403b96b58cbaa8d3269ed0b146800d9fc72da85"
+    },
+    {
+      "path": "additional_codes/n37_2O_code.pkl",
+      "distance": 7,
+      "group": "2O",
+      "sha256": "c953c3b7ec1b9a3afb9e2f4a3329bcd08f6304a850c6b39e8ac4581c0fe2c91c"
+    },
+    {
+      "path": "additional_codes/n49_2O_code.pkl",
+      "distance": 8,
+      "group": "2O",
+      "sha256": "9815c9176f7b7fc06e1c9dc5eb99e63f32138ce89e5d527b9a53f5075875d61e"
+    },
+    {
+      "path": "additional_codes/n61_2T_code.pkl",
+      "distance": 9,
+      "group": "2T",
+      "sha256": "8d3241844c7fbea79a11b242072f4757874bd6f7e64767268ecde59b8de9a63e"
+    },
+    {
+      "path": "additional_codes/n76_2O_code.pkl",
+      "distance": 10,
+      "group": "2O",
+      "sha256": "2836de2949a6d500383db8acd84647a71614b3f1e1228cd5be28acd8e72bea7b"
+    },
+    {
+      "path": "additional_codes/n20_2D6_code.pkl",
+      "distance": 5,
+      "group": "2D6",
+      "sha256": "079648440d567f7335ee7384a004490c8113f7a89846a579124da1165616a5f0"
+    }
+  ]
+}
